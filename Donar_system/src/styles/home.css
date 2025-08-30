@@ -1,0 +1,228 @@
+.home {
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./src/assets/images/home.jpg") center/cover no-repeat;
+  background-attachment: fixed;
+  background-position-y: 70px;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 80px;
+  color: white;
+  text-align: right;
+  position: relative;
+}
+
+.hero-text {
+  animation: fadeInRight 1.5s ease;
+  max-width: 450px;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color:whitesmoke;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+#gift{
+    text-align: center;
+    color: limegreen;
+    padding: 10px 20px;
+    font-size: 20px;
+}
+.highlight-box {
+  background: rgba(255, 77, 77, 0.85);
+  padding: 10px 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  animation: bounceIn 1.5s ease;
+}
+
+.highlight-box h3 {
+  font-size: 1.6rem;
+  color: #fff;
+  margin: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+.count {
+  font-weight: bold;
+  color: limegreen;
+  font-size: 1.5rem;
+}
+
+.donor-btn {
+  position: absolute;
+  bottom: 160px;
+  right: 40px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  animation: fadeInUp 1.5s ease;
+}
+
+.donor-btn:hover {
+  background: #e60000;
+}
+
+.donation {
+  padding: 80px 40px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.donation h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #222;
+}
+
+.donation p {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.donation-flex {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.donation-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  width: 280px; 
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  animation: fadeInUp 1.5s ease;
+}
+
+.donation-card:hover {
+  transform: translateY(-12px);
+}
+
+.donation-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.donation-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.donation-card p {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 50px;
+    text-align: right;
+  }
+
+  .hero-text h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 30px;
+    justify-content: flex-start;
+    align-items: flex-end;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .highlight-box h3 {
+    font-size: 1.3rem;
+  }
+
+  .donor-btn {
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .donation-card {
+    width: 100%;
+  }
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
